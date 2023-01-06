@@ -1,0 +1,43 @@
+1. Read file- convert all text in upper case. write this text to original file
+
+
+with open("C:\\Users\\psdhi\\Desktop\\file1.txt","r+")as f:
+    data=f.readlines()
+    for c in data:
+        f.write(c.upper())
+        
+        
+2.Remove duplicate values from file
+
+with open("C:\\Users\\psdhi\\Desktop\\file3.txt","r+")as f:
+    data=f.readlines()
+    for c in data:
+        r=''.join(c)
+    
+    t=r.split()
+    res=set(t)
+    
+    
+    for i in res:
+        f.write(i)
+        
+    
+
+3.Remove vowels 
+
+with open("C:\\Users\\psdhi\\Desktop\\file2.txt","r+")as f:
+    data=f.readlines()
+    for c in data:
+        r=''.join(c)
+    vowels=['a','e','i','o','u']
+    t=r.split()
+    
+    res=''
+    for word in t:
+        str=''
+        for v in word:
+            if v in vowels: 
+                pass
+            else:
+                str=str+v
+        f.write(str)

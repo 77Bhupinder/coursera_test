@@ -1,0 +1,21 @@
+1. We have a sentence - find out no of words , no of chr without space
+	
+	a='How are you'
+	b=a.split()
+	c=''.join(b)
+	print('Number of words are---',len(b))
+	print('Number of charecters without space---',len(c))
+
+2. List - Have duplicate values , find out all duplicate values , all unique values
+
+	a=[23,34,23,45,67,54,34,54,98,75]
+	dup=[n for n in a if a.count(n)>1]
+      print('Duplicate values---',set(dup))
+	print('Unique values----',set(a))
+
+
+3. Sentence - remove all spaces from sentences
+       s='Christmas is coming'
+	 t=s.split()
+	 r=''.join(t)
+	print(s,'---after removing spaces is---',r)

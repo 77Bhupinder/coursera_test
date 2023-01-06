@@ -1,0 +1,102 @@
+1 ---To check number is even digited or odd digited
+
+def fndigited(n):
+    c=0
+    r=0
+    while n!= 0:
+        n=n//10
+        c=c+1
+    if c%2==0:
+        return'Even Digit'
+    else:
+        return 'Odd Digit'
+    
+        
+        
+    
+ 
+
+
+x=int(input("Enter number"))
+print(fndigited(x))
+    
+2-----Perfect number or not-------
+
+def fnperfectnum(n):
+    sum=0
+    
+    for i in range(1,int(n/2)+1):
+        
+        if n%i==0:
+            sum=sum+i
+
+    if n==sum:
+        return 'Perfect Number'
+    else:
+        return 'Not Perfect Number'
+     
+    
+        
+ 
+x=int(input("Enter number"))
+print(fnperfectnum(x))
+    
+
+3-------To find how many even digit and how many odd digit----------
+
+
+
+def fnedig_odig(n):
+
+    even_c=0
+    odd_c=0
+
+    while n!=0:
+        r=n%10
+        if r%2==0:
+            even_c=even_c+1
+        else:
+            odd_c=odd_c+1
+        n=n//10
+    return print('Even digits',even_c,' Odd digits',odd_c)
+    
+    
+    
+        
+ 
+x=int(input("Enter number"))
+fnedig_odig(x)
+    
+
+4--------To find Traid Number---------
+
+def fntraid_num(n):
+    temp=n
+    c=0
+    while temp!=0:
+        temp=temp//10
+        c=c+1
+    if c==3:   
+
+        d1=n%10
+        n=n//10
+        d2=n%10
+        d3=n//10
+        print(d1,'--',d2,'--',d3)
+        if d2==2*d3:
+            if d1==3*d3:
+                return 'Traid Number'
+            else:
+                return 'Not Traid Number'
+        else:
+            return 'Not Traid Number'
+    else:
+        return 'Number of digits are not equal to 3'
+        
+ 
+x=int(input("Enter number"))
+print(fntraid_num(x))
+    
+
+
+
